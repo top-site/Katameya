@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KatameyaCosmo | Luxury Cosmetics by Katameya Pharma LLC</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#C5A059',
+                            rose: '#E6C7C2',
+                            light: '#FBF9F7',
+                            dark: '#1C1C1C',
+                            muted: '#7A7A7A'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FBF9F7;
+            color: #1C1C1C;
+        }
+        h1, h2, h3, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body class="bg-brand-light text-brand-dark antialiased selection:bg-brand-rose selection:text-brand-dark">
+
+    <header class="sticky top-0 z-40 bg-brand-light/90 backdrop-blur-md border-b border-stone-200/60">
+        <div class="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#home" class="group">
+                <span class="font-serif font-bold text-lg tracking-wider block text-brand-dark">KATAMEYACOSMO</span>
+                <span class="text-[9px] tracking-widest uppercase text-brand-muted font-medium block">Produced for Katameya Pharma LLC</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 text-xs font-medium tracking-widest uppercase text-brand-muted">
+                <a href="#products" class="hover:text-brand-dark transition-colors">Products</a>
+                <a href="#about" class="hover:text-brand-dark transition-colors">About</a>
+                <a href="#contact" class="hover:text-brand-dark transition-colors">Contact</a>
+            </nav>
+            <button id="menu-btn" aria-label="Toggle menu" class="md:hidden text-brand-dark p-2">
+                <i class="fa-solid fa-bars text-lg"></i>
+            </button>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-light border-b border-stone-200 px-6 py-4 space-y-3">
+            <a href="#products" class="block text-xs uppercase tracking-widest py-1 text-brand-muted hover:text-brand-dark">Products</a>
+            <a href="#about" class="block text-xs uppercase tracking-widest py-1 text-brand-muted hover:text-brand-dark">About</a>
+            <a href="#contact" class="block text-xs uppercase tracking-widest py-1 text-brand-muted hover:text-brand-dark">Contact</a>
+        </div>
+    </header>
+
+    <section id="home" class="py-24 md:py-36 max-w-4xl mx-auto px-6 text-center">
+        <div class="inline-block text-[10px] font-semibold tracking-widest uppercase text-brand-gold bg-brand-gold/10 px-3.5 py-1.5 rounded-full mb-6">
+           
+        </div>
+        <h1 class="text-4xl md:text-6xl font-serif font-normal text-brand-dark leading-tight">
+            <br><span class="italic text-brand-gold font-light">EDA Registered Cosmoceutical Products</span>
+        </h1>
+        <p class="text-brand-muted text-sm md:text-base font-light max-w-lg mx-auto mt-6 leading-relaxed">
+            Produced for Katameya Pharma LLC. Formulated with exquisite rose oil and coconut oil for effortless everyday elegance.
+        </p>
+        <div class="mt-10">
+            <a href="#products" class="inline-block bg-brand-dark hover:bg-brand-gold text-white text-xs font-medium tracking-widest uppercase px-8 py-4 rounded-full transition-colors">
+                Explore Collection
+            </a>
+        </div>
+    </section>
+
+    <section id="products" class="py-20 max-w-5xl mx-auto px-6 border-t border-stone-200/60">
+        <div class="text-center max-w-md mx-auto mb-16">
+            <span class="text-[10px] font-semibold tracking-widest uppercase text-brand-gold">Registered Formulations</span>
+            <h2 class="text-3xl font-serif font-normal text-brand-dark mt-2">The 6 Essentials</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Product 1 -->
+            <div onclick="openModal('KATAMEYACOSMO HAND WASH WITH ROSE OIL', 'Infused with natural rose oil for gentle cleansing and delicate hydration of hands.', 'Rose Oil')" class="bg-white p-8 rounded-2xl border border-stone-200/80 hover:border-brand-gold/60 transition-all cursor-pointer flex flex-col justify-between group">
+                <div>
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="text-[9px] uppercase tracking-widest font-medium text-brand-muted">Hand Wash</span>
+                        <span class="text-[10px] text-brand-gold font-medium"><i class="fa-solid fa-droplet mr-1"></i>Rose Oil</span>
+                    </div>
+                    <h3 class="font-serif font-normal text-base text-brand-dark group-hover:text-brand-gold transition-colors leading-snug">KATAMEYACOSMO HAND WASH WITH ROSE OIL</h3>
+                </div>
+                <div class="mt-8 pt-4 border-t border-stone-100 flex items-center justify-between text-xs text-brand-muted">
+                    <span>EDA Registered</span>
+                    <span class="font-medium text-brand-dark group-hover:translate-x-1 transition-transform">Details &rarr;</span>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div onclick="openModal('KATAMEYACOSMO SHOWER GEL WITH COCONUT OIL', 'Rich, nourishing shower gel infused with coconut oil to lock in skin moisture.', 'Coconut Oil')" class="bg-white p-8 rounded-2xl border border-stone-200/80 hover:border-brand-gold/60 transition-all cursor-pointer flex flex-col justify-between group">
+                <div>
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="text-[9px] uppercase tracking-widest font-medium text-brand-muted">Body Care</span>
+                        <span class="text-[10px] text-brand-gold font-medium"><i class="fa-solid fa-seedling mr-1"></i>Coconut Oil</span>
+                    </div>
+                    <h3 class="font-serif font-normal text-base text-brand-dark group-hover:text-brand-gold transition-colors leading-snug">KATAMEYACOSMO SHOWER GEL WITH COCONUT OIL</h3>
+                </div>
+                <div class="mt-8 pt-4 border-t border-stone-100 flex items-center justify-between text-xs text-brand-muted">
+                    <span>EDA Registered</span>
+                    <span class="font-medium text-brand-dark group-hover:translate-x-1 transition-transform">Details &rarr;</span>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div onclick="openModal('KATAMEYACOSMO HAIR SHAMPOO WITH COCONUT OIL', 'Deep scalp cleansing formula enriched with coconut oil for smooth, shiny hair.', 'Coconut Oil')" class="bg-white p-8 rounded-2xl border border-stone-200/80 hover:border-brand-gold/60 transition-all cursor-pointer flex flex-col justify-between group">
+                <div>
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="text-[9px] uppercase tracking-widest font-medium text-brand-muted">Hair Care</span>
+                        <span class="text-[10px] text-brand-gold font-medium"><i class="fa-solid fa-seedling mr-1"></i>Coconut Oil</span>
+                    </div>
+                    <h3 class="font-serif font-normal text-base text-brand-dark group-hover:text-brand-gold transition-colors leading-snug">KATAMEYACOSMO HAIR SHAMPOO WITH COCONUT OIL</h3>
+                </div>
+                <div class="mt-8 pt-4 border-t border-stone-100 flex items-center justify-between text-xs text-brand-muted">
+                    <span>EDA Registered</span>
+                    <span class="font-medium text-brand-dark group-hover:translate-x-1 transition-transform">Details &rarr;</span>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div onclick="openModal('KATAMEYACOSMO FACE CLEANSER WITH ROSE OIL', 'Gentle facial cleanser infused with rose oil to purify and calm the complexion.', 'Rose Oil')" class="bg-white p-8 rounded-2xl border border-stone-200/80 hover:border-brand-gold/60 transition-all cursor-pointer flex flex-col justify-between group">
+                <div>
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="text-[9px] uppercase tracking-widest font-medium text-brand-muted">Face Care</span>
+                        <span class="text-[10px] text-brand-gold font-medium"><i class="fa-solid fa-droplet mr-1"></i>Rose Oil</span>
+                    </div>
+                    <h3 class="font-serif font-normal text-base text-brand-dark group-hover:text-brand-gold transition-colors leading-snug">KATAMEYACOSMO FACE CLEANSER WITH ROSE OIL</h3>
+                </div>
+                <div class="mt-8 pt-4 border-t border-stone-100 flex items-center justify-between text-xs text-brand-muted">
+                    <span>EDA Registered</span>
+                    <span class="font-medium text-brand-dark group-hover:translate-x-1 transition-transform">Details &rarr;</span>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div onclick="openModal('KATAMEYACOSMO BODY SPLASH SPRAY', 'Refreshing, lightweight body mist delivering a subtle and captivating fragrance trail.', 'Fresh Mist')" class="bg-white p-8 rounded-2xl border border-stone-200/80 hover:border-brand-gold/60 transition-all cursor-pointer flex flex-col justify-between group">
+                <div>
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="text-[9px] uppercase tracking-widest font-medium text-brand-muted">Fragrance</span>
+                        <span class="text-[10px] text-brand-gold font-medium"><i class="fa-solid fa-wind mr-1"></i>Splash</span>
+                    </div>
+                    <h3 class="font-serif font-normal text-base text-brand-dark group-hover:text-brand-gold transition-colors leading-snug">KATAMEYACOSMO BODY SPLASH SPRAY</h3>
+                </div>
+                <div class="mt-8 pt-4 border-t border-stone-100 flex items-center justify-between text-xs text-brand-muted">
+                    <span>EDA Registered</span>
+                    <span class="font-medium text-brand-dark group-hover:translate-x-1 transition-transform">Details &rarr;</span>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div onclick="openModal('KATAMEYACOSMO HAIR SERUM WITH COCONUT OIL', 'Nourishing hair serum with coconut oil to control frizz and enhance natural gloss.', 'Coconut Oil')" class="bg-white p-8 rounded-2xl border border-stone-200/80 hover:border-brand-gold/60 transition-all cursor-pointer flex flex-col justify-between group">
+                <div>
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="text-[9px] uppercase tracking-widest font-medium text-brand-muted">Hair Treatment</span>
+                        <span class="text-[10px] text-brand-gold font-medium"><i class="fa-solid fa-seedling mr-1"></i>Coconut Oil</span>
+                    </div>
+                    <h3 class="font-serif font-normal text-base text-brand-dark group-hover:text-brand-gold transition-colors leading-snug">KATAMEYACOSMO HAIR SERUM WITH COCONUT OIL</h3>
+                </div>
+                <div class="mt-8 pt-4 border-t border-stone-100 flex items-center justify-between text-xs text-brand-muted">
+                    <span>EDA Registered</span>
+                    <span class="font-medium text-brand-dark group-hover:translate-x-1 transition-transform">Details &rarr;</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white border-t border-stone-200/60">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <span class="text-[10px] font-semibold tracking-widest uppercase text-brand-gold">Our Philosophy</span>
+            <h2 class="text-3xl font-serif font-normal text-brand-dark mt-2 mb-6">Excellence in Formulation</h2>
+            <p class="text-brand-muted text-sm md:text-base font-light leading-relaxed">
+                Katameya Pharma LLC maintains rigorous standards of cosmoceutical safety and quality control. Every KatameyaCosmo cosmetic product is officially registered with the Egyptian Drug Authority (EDA).
+            </p>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 max-w-3xl mx-auto px-6 border-t border-stone-200/60">
+        <div class="text-center mb-10">
+            <span class="text-[10px] font-semibold tracking-widest uppercase text-brand-gold">Inquiries</span>
+            <h2 class="text-3xl font-serif font-normal text-brand-dark mt-2">Get in Touch</h2>
+        </div>
+        <form onsubmit="handleSubmit(event)" class="space-y-4 max-w-md mx-auto">
+            <input type="text" required placeholder="Your Name" class="w-full bg-white border border-stone-200 rounded-xl px-4 py-3 text-xs focus:outline-none focus:border-brand-gold">
+            <input type="email" required placeholder="Email Address" class="w-full bg-white border border-stone-200 rounded-xl px-4 py-3 text-xs focus:outline-none focus:border-brand-gold">
+            <textarea rows="3" required placeholder="Your Message..." class="w-full bg-white border border-stone-200 rounded-xl px-4 py-3 text-xs focus:outline-none focus:border-brand-gold"></textarea>
+            <button type="submit" class="w-full bg-brand-dark hover:bg-brand-gold text-white py-3.5 rounded-xl text-xs font-medium uppercase tracking-widest transition-colors">
+                Send Message
+            </button>
+        </form>
+    </section>
+
+    <footer class="py-12 bg-white border-t border-stone-200/60 text-center text-xs text-brand-muted">
+        <div class="max-w-5xl mx-auto px-6 space-y-3">
+            <p class="font-serif text-brand-dark text-sm tracking-wide">KATAMEYACOSMO</p>
+            <p class="text-[11px] uppercase tracking-widest">Produced for Katameya Pharma LLC &bull; Official EDA Registered Products</p>
+            <p class="text-[10px] pt-4">&copy; 2026 Katameya Pharma LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="product-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-xs hidden p-4">
+        <div class="bg-white rounded-2xl max-w-sm w-full p-8 shadow-xl relative text-center">
+            <button onclick="closeModal()" aria-label="Close modal" class="absolute top-4 right-4 text-stone-400 hover:text-brand-dark p-2">
+                <i class="fa-solid fa-xmark text-base"></i>
+            </button>
+            <span id="modal-badge" class="inline-block text-[9px] font-semibold tracking-widest uppercase text-brand-gold bg-brand-gold/10 px-3 py-1 rounded-full mb-3">Badge</span>
+            <h3 id="modal-title" class="font-serif font-normal text-lg text-brand-dark mb-3">Product Name</h3>
+            <p id="modal-desc" class="text-xs text-brand-muted font-light leading-relaxed mb-6">Description goes here.</p>
+            <div class="bg-stone-50 py-2.5 rounded-xl text-[10px] text-brand-muted uppercase tracking-widest font-medium">
+                <i class="fa-solid fa-shield-halved text-brand-gold mr-1"></i> EDA Registered
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        document.querySelectorAll('#mobile-menu a').forEach(l => l.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+        // Modal logic
+        const modal = document.getElementById('product-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalDesc = document.getElementById('modal-desc');
+        const modalBadge = document.getElementById('modal-badge');
+
+        function openModal(title, desc, badge) {
+            modalTitle.textContent = title;
+            modalDesc.textContent = desc;
+            modalBadge.textContent = badge;
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+        }
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+
+        function handleSubmit(e) {
+            e.preventDefault();
+            alert('Thank you for your message. Katameya Pharma LLC will contact you soon.');
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>
